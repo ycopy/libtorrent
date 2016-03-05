@@ -1188,7 +1188,7 @@ namespace libtorrent
 
 	int disk_io_thread::do_read(disk_io_job* j, jobqueue_t& completed_jobs)
 	{
-		if (!m_settings.get_bool(settings_pack::use_read_cache)
+		if (m_settings.get_bool(settings_pack::use_read_cache) == false
 			|| m_settings.get_int(settings_pack::cache_size) == 0)
 		{
 			// we're not using a cache. This is the simple path
@@ -2327,7 +2327,7 @@ namespace libtorrent
 			}
 		}
 
-		if (pe == NULL && !m_settings.get_bool(settings_pack::use_read_cache))
+		if (pe == NULL && m_settings.get_bool(settings_pack::use_read_cache) == false)
 		{
 			l.unlock();
 			// if there's no piece in the cache, and the read cache is disabled
