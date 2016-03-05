@@ -429,7 +429,7 @@ TORRENT_TEST(auto_disk_cache_size)
 {
 	using namespace libtorrent;
 	run_test(
-		[](lt::session& ses0, lt::session& ses1) { /*set_cache_size(ses0, -1);*/ },
+		[](lt::session& ses0, lt::session& ses1) { set_cache_size(ses0, -1); },
 		[](lt::session& ses, lt::alert const* alert) {},
 		[](std::shared_ptr<lt::session> ses[2]) {
 			TEST_EQUAL(is_seed(*ses[0]), true);
