@@ -106,3 +106,70 @@ TORRENT_TEST(session_stats)
 	}
 }
 
+TORRENT_TEST(save_restore_state)
+{
+	entry st;
+	{
+		settings_pack p;
+		// set the cache size
+		p.set_int(settings_pack::cache_size, 1337);
+		lt::session ses(p);
+		ses.save_state(st);
+	}
+
+	{
+		settings_pack p;
+		p.set_int(settings_pack::cache_size, 90);
+		lt::session ses(p);
+		ses.load_state(st);
+		// make sure we loaded the cache size correctly
+		settings_pack sett = ses.get_settings();
+		TEST_EQUAL(sett.get_int(settings_pack::cache_size), 1337);
+	}
+}
+
+TORRENT_TEST(save_restore_state_save_filter)
+{
+	entry st;
+	{
+		settings_pack p;
+		// set the cache size
+		p.set_int(settings_pack::cache_size, 1337);
+		lt::session ses(p);
+		// save everything _but_ the settings
+		ses.save_state(st, ~session::save_settings);
+	}
+
+	{
+		settings_pack p;
+		p.set_int(settings_pack::cache_size, 90);
+		lt::session ses(p);
+		ses.load_state(st);
+		// make sure whatever we loaded did not include the cache size
+		settings_pack sett = ses.get_settings();
+		TEST_EQUAL(sett.get_int(settings_pack::cache_size), 90);
+	}
+}
+
+TORRENT_TEST(save_restore_state_load_filter)
+{
+	entry st;
+	{
+		settings_pack p;
+		// set the cache size
+		p.set_int(settings_pack::cache_size, 1337);
+		lt::session ses(p);
+		ses.save_state(st);
+	}
+
+	{
+		settings_pack p;
+		p.set_int(settings_pack::cache_size, 90);
+		lt::session ses(p);
+		// load everything _but_ the settings
+		ses.load_state(st, ~session::save_settings);
+		settings_pack sett = ses.get_settings();
+		TEST_EQUAL(sett.get_int(settings_pack::cache_size), 90);
+	}
+}
+

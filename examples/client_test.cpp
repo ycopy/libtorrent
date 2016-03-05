@@ -1601,7 +1601,7 @@ int main(int argc, char* argv[])
 	{
 		bdecode_node e;
 		if (bdecode(&in[0], &in[0] + in.size(), e, ec) == 0)
-			ses.load_state(e);
+			ses.load_state(e, save_dht_state);
 	}
 
 	for (std::vector<add_torrent_params>::iterator i = magnet_links.begin()
@@ -2342,7 +2342,7 @@ int main(int argc, char* argv[])
 	printf("\nsaving session state\n");
 	{
 		entry session_state;
-		ses.save_state(session_state);
+		ses.save_state(session_state, session::save_dht_state);
 
 		std::vector<char> out;
 		bencode(std::back_inserter(out), session_state);
