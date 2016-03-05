@@ -901,8 +901,12 @@ namespace aux {
 				// apply_settings_pack will update dht and proxy
 				boost::shared_ptr<settings_pack> pack = load_pack_from_dict(settings);
 				apply_settings_pack(pack);
+#ifndef TORRENT_DISABLE_DHT
 				need_update_dht = false;
+#endif
+#ifndef TORRENT_NO_DEPRECATE
 				need_update_proxy = false;
+#endif
 			}
 		}
 
