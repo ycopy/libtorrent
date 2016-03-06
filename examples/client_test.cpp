@@ -1600,7 +1600,7 @@ int main(int argc, char* argv[])
 	{
 		bdecode_node e;
 		if (bdecode(&in[0], &in[0] + in.size(), e, ec) == 0)
-			ses.load_state(e, save_dht_state);
+			ses.load_state(e, session::save_dht_state);
 	}
 #endif
 
