@@ -76,6 +76,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\ed25519\src\add_scalar.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\fe.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\ge.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\keypair.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\key_exchange.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\sc.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\seed.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\sha512.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\sign.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\verify.cpp" />
     <ClCompile Include="..\..\..\src\alert.cpp" />
     <ClCompile Include="..\..\..\src\alert_manager.cpp" />
     <ClCompile Include="..\..\..\src\allocator.cpp" />
@@ -179,6 +189,12 @@
     <None Include="..\..\..\src\Makefile.am" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\ed25519\src\fe.h" />
+    <ClInclude Include="..\..\..\ed25519\src\fixedint.h" />
+    <ClInclude Include="..\..\..\ed25519\src\ge.h" />
+    <ClInclude Include="..\..\..\ed25519\src\precomp_data.h" />
+    <ClInclude Include="..\..\..\ed25519\src\sc.h" />
+    <ClInclude Include="..\..\..\ed25519\src\sha512.h" />
     <ClInclude Include="..\..\..\include\libtorrent\address.hpp" />
     <ClInclude Include="..\..\..\include\libtorrent\add_torrent_params.hpp" />
     <ClInclude Include="..\..\..\include\libtorrent\alert.hpp" />

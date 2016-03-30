@@ -34,6 +34,12 @@
     <Filter Include="头文件\include\libtorrent\kademlia">
       <UniqueIdentifier>{86a4d766-95b0-4cea-adde-87fe3436a237}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\ed25519">
+      <UniqueIdentifier>{5776f7b9-84f1-4e25-9ac0-c55ad73edcf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ed25519\src">
+      <UniqueIdentifier>{445f95ba-5adb-4938-be89-1be43abed823}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -329,6 +335,36 @@
     </ClCompile>
     <ClCompile Include="..\..\..\src\xml_parse.cpp">
       <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\add_scalar.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\fe.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\ge.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\key_exchange.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\keypair.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\sc.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\seed.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\sha512.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\sign.cpp">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ed25519\src\verify.cpp">
+      <Filter>源文件\ed25519\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -768,6 +804,24 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\libtorrent\kademlia\traversal_algorithm.hpp">
       <Filter>头文件\include\libtorrent\kademlia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ed25519\src\fe.h">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ed25519\src\fixedint.h">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ed25519\src\ge.h">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ed25519\src\precomp_data.h">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ed25519\src\sc.h">
+      <Filter>源文件\ed25519\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ed25519\src\sha512.h">
+      <Filter>源文件\ed25519\src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
