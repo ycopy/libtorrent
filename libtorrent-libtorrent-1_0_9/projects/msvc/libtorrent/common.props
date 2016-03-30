@@ -5,7 +5,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/../../../../../../libs/libtorrent/libtorrent-rasterbar-1.0.4/include;$(ProjectDir)/../../../../../../libs/boost/boost_1_57_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/../../../../../../../../libs/libtorrent/github/libtorrent/libtorrent-libtorrent-1_0_9/include;$(ProjectDir)/../../../../../../../../libs/boost/boost_1_60_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BOOST_ASIO_ENABLE_CANCELIO;BOOST_ASIO_HASH_MAP_BUCKETS=1021;BOOST_ASIO_SEPARATE_COMPILATION;BOOST_EXCEPTION_DISABLE;TORRENT_DEBUG;TORRENT_DISABLE_GEO_IP;TORRENT_USE_I2P=1;TORRENT_USE_TOMMATH;WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_DEPRECATE;_FILE_OFFSET_BITS=64;_SCL_SECURE_NO_DEPRECATE;_WIN32;_WIN32_WINNT=0x0501;__USE_W32_SOCKETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>

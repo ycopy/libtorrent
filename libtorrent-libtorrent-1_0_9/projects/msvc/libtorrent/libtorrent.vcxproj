@@ -80,7 +80,6 @@
     <ClCompile Include="..\..\..\src\alert_manager.cpp" />
     <ClCompile Include="..\..\..\src\allocator.cpp" />
     <ClCompile Include="..\..\..\src\asio.cpp" />
-    <ClCompile Include="..\..\..\src\asio_ssl.cpp" />
     <ClCompile Include="..\..\..\src\assert.cpp" />
     <ClCompile Include="..\..\..\src\bandwidth_limit.cpp" />
     <ClCompile Include="..\..\..\src\bandwidth_manager.cpp" />

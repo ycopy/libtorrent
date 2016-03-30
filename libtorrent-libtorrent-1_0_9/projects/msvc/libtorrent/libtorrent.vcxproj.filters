@@ -87,9 +87,6 @@
     <ClCompile Include="..\..\..\src\asio.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\asio_ssl.cpp">
-      <Filter>源文件\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\src\assert.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
